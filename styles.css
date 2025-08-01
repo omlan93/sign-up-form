@@ -160,13 +160,18 @@ a {
 
 @media only screen and (max-width: 700px) {
 
+    html {
+        font-size: 16px;
+    }
+
     body {
         flex-direction: column;
         width: 100%;
+        height: 100%;
         padding: 0;
         margin: 0;
-        min-height: 100dvh;
-        overflow-x: hidden;
+
+        background-size: cover;
 
     }
 
@@ -175,6 +180,7 @@ a {
         padding: 10px 20px;
         height: auto;
         border: none;
+        background-color: transparent;
     }
 
     .image-container {
@@ -182,6 +188,8 @@ a {
         flex-wrap: wrap;
 
         width: 100%;
+        border: 2px solid red;
+        display: none;
 
     }
 
@@ -196,7 +204,8 @@ a {
 
     .odin-logo-container {
         width: 100%;
-        top: 60px;
+        position: static;
+        height: 100px;
     }
 
 
@@ -208,8 +217,10 @@ a {
         box-shadow: 0 3px 10px 0 rgb(41, 38, 38);
         width: 100%;
         font-size: 10px;
-        height: 600px;
+        height: 450px;
         margin: 0;
+        font-size: 1rem;
+        margin-top: 5px;
     }
 
     .form-body>h1 {
@@ -220,7 +231,7 @@ a {
     }
 
     .form-body label {
-        margin-top: 20px;
+        margin-top: 10px;
         margin-right: 10px;
         margin-left: 20px;
     }
@@ -228,9 +239,15 @@ a {
     .form-row {
         display: flex;
         flex-direction: column;
-        padding-left: 10px;
+        padding-left: 5px;
         width: 100%;
     }
+
+    .form-row.name-row {
+        flex-direction: row;
+    }
+
+
 
     .form-body input[type="text"],
     .form-body input[type="email"],
@@ -238,8 +255,20 @@ a {
         display: block;
         margin-top: 5px;
         border: 1px solid #E5E7EB;
-        padding: 5px;
+        padding: 5px 2px;
         padding-right: 10px;
+    }
+
+    .form-row {
+        input {
+            width: 332px;
+        }
+    }
+
+    .name-row {
+        input {
+            width: 150px;
+        }
     }
 
     .form-submit {
