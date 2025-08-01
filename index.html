@@ -9,11 +9,15 @@
 </head>
 
 <body>
-    <img class="bg-image" src="./images/bg-image.jpg" alt="">
+    <div class="image-container">
+        <img class="bg-image" src="./images/bg-image.jpg" alt="">
+
+    </div>
     <div class="odin-logo-container">
         <img class='odin-logo' src="./images/odin-logo.png" alt="">
         <span>ODIN</span>
     </div>
+
     <form action="" method="get" class="sign-up-form">
         <div class="form-header">
             <h1>This is not a real online service! You know you need
@@ -23,8 +27,44 @@
                 You <em>know</em> you want to.
             </h1>
         </div>
-        <div class="form-body"></div>
-        <div class="form-submit"></div>
+        <div class="form-body">
+            <h1>Let's do this!</h1>
+            <div class="form-row">
+                <label for="first_name">FIRST NAME
+                    <input type="text" name="first_name" id="first_name">
+                </label>
+
+                <label for="last_name">LAST NAME
+                    <input type="text" name="last_name" id="last_name">
+                </label>
+
+            </div>
+            <div class="form-row">
+                <label for="email">EMAIL
+                    <input type="email" name="email" id="email">
+                </label>
+
+                <label for="email">PHONE NUMBER
+                    <input type="text" name="phone_number" id="phone_number">
+                </label>
+
+            </div>
+            <div class="form-row">
+                <label for="password">PASSWORD
+                    <input type="password" name="password" id="password">
+                </label>
+
+                <label for="confirm_password">CONFIRM PASSWORD
+                    <input type="password" name="confirm_password" id="confirm_password">
+                </label>
+
+            </div>
+        </div>
+        <div class="form-submit">
+
+            <button class="submit-button" type="submit">Create Account</button>
+            <span>Already have an account? <a href="">Log In</a></span>
+        </div>
 
     </form>
 
