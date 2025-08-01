@@ -30,32 +30,36 @@
         <div class="form-body">
             <h1>Let's do this!</h1>
             <div class="form-row name-row">
-                <label for="first_name">FIRST NAME
-                    <input type="text" name="first_name" id="first_name">
+                <label for="first_name">FIRST NAME<span>*</span>
+                    <input type="text" name="first_name" id="first_name" required maxlength="30">
                 </label>
 
-                <label for="last_name">LAST NAME
-                    <input type="text" name="last_name" id="last_name">
-                </label>
-
-            </div>
-            <div class="form-row">
-                <label for="email">EMAIL
-                    <input type="email" name="email" id="email">
-                </label>
-
-                <label for="email">PHONE NUMBER
-                    <input type="text" name="phone_number" id="phone_number">
+                <label for="last_name">LAST NAME<span>*</span>
+                    <input type="text" name="last_name" id="last_name" required maxlength="30">
                 </label>
 
             </div>
             <div class="form-row">
-                <label for="password">PASSWORD
-                    <input type="password" name="password" id="password">
+                <label for="email">EMAIL<span>*</span>
+                    <input type="email" name="email" id="email" required>
                 </label>
 
-                <label for="confirm_password">CONFIRM PASSWORD
-                    <input type="password" name="confirm_password" id="confirm_password">
+                <label for="phone_number">PHONE NUMBER
+                    <input type="text" name="phone_number" id="phone_number" pattern="^01[3-9]\d{8}$" required
+                        placeholder="01XXXXXXXXX">
+                </label>
+
+            </div>
+            <div class="form-row">
+                <label for="password">PASSWORD<span>*</span>
+                    <input type="password" name="password" id="password" required minlength="8">
+                </label>
+
+                <label for="confirm_password">CONFIRM PASSWORD<span>*</span>
+                    <div>
+                        <input type="password" name="confirm_password" id="confirm_password" required minlength="8">
+                        <span class="confirm-pass-span" style="font-family: sans-serif;"></span>
+                    </div>
                 </label>
 
             </div>
@@ -69,5 +73,7 @@
     </form>
 
 </body>
+
+<script src="./script.js"></script>
 
 </html>

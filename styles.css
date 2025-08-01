@@ -118,10 +118,38 @@ form.sign-up-form {
 .form-body input[type="password"] {
     display: block;
     margin-top: 10px;
-    border: 1px solid #E5E7EB;
+    border: 1px solid #D6D9DC;
     padding: 10px;
     padding-right: 120px;
+    border-radius: 3px;
+    letter-spacing: 1px;
 }
+
+.form-body input[type="text"]:user-invalid,
+.form-body input[type="email"]:user-invalid,
+.form-body input[type="password"]:user-invalid {
+    border: 1px solid red;
+    background-color: rgb(238, 133, 145);
+
+}
+
+.form-body input[type="text"]:focus:invalid,
+.form-body input[type="email"]:focus:invalid,
+.form-body input[type="password"]:focus:invalid {
+    outline: none;
+    border: 1px solid red;
+    background-color: rgb(238, 133, 145);
+}
+
+.form-body input[type="text"]:focus:valid,
+.form-body input[type="email"]:focus:valid,
+.form-body input[type="password"]:focus:valid {
+    outline: none;
+    border: 1px solid green;
+    background-color: rgb(158, 238, 149);
+}
+
+
 
 .form-submit {
     margin-top: 10px;
@@ -149,6 +177,14 @@ form.sign-up-form {
 a {
     color: rgb(80, 78, 78);
     text-decoration: none;
+}
+
+label>span {
+    font-family: sans-serif;
+}
+
+.confirm-pass-span {
+    background-color: rgb(246, 94, 94);
 }
 
 @media only screen and (min-width: 700px) {
@@ -206,6 +242,7 @@ a {
         width: 100%;
         position: static;
         height: 100px;
+        padding: 5px 0;
     }
 
 
@@ -226,7 +263,7 @@ a {
     .form-body>h1 {
         margin-left: 20px;
         width: 100%;
-        padding: 10px 10px;
+        padding: 5px 10px;
         color: gray;
     }
 
